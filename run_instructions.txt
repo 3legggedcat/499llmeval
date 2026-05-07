@@ -1,0 +1,33 @@
+Run from the project folder:
+/mnt/c/Users/franz/Desktop/2026_spring_cs/cs499research
+
+Option 1: Use a virtual environment
+
+python3 -m venv .venv
+source .venv/bin/activate
+pip install pypdf
+ollama pull llama3.1:8b
+python3 main.py /path/to/document.pdf
+python3 main.py /path/to/slides.pptx
+
+Option 2: Install globally
+
+pip3 install pypdf
+ollama pull llama3.1:8b
+python3 main.py /path/to/document.pdf
+python3 main.py /path/to/slides.pptx
+
+If Ollama and the model are already installed, just run:
+
+python3 main.py /path/to/document.pdf
+python3 main.py /path/to/slides.pptx
+
+Windows PowerShell virtual environment activation:
+
+.venv\Scripts\Activate.ps1
+
+Only if you want the optional remote backend later:
+
+pip install pypdf litellm llama-index llama-index-llms-litellm
+python3 main.py /path/to/document.pdf --backend litellm
+python3 main.py /path/to/slides.pptx --backend litellm

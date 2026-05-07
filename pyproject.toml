@@ -1,0 +1,12 @@
+[project]
+name = "cs499research"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "litellm>=1.81.3",
+    "llama-index>=0.14.13",
+    "llama-index-llms-litellm>=0.6.3",
+    "pypdf>=5.4.0",
+]
